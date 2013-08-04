@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Setup Gmail account.
+
+DIR="$(pwd)"
+INFO=$DIR/UserInfo/config/BlankInfo
+
+echo
+echo Assuming all files are in "'$DIR'"
+echo
+mkdir $HOME/.gmailOSD/
+cp $INFO $HOME/.gmailOSD/UserInfo
+cp $DIR/Icons/icon.ico $HOME/.gmailOSD/icon.ico
+nano $HOME/.gmailOSD/UserInfo
+echo "  Done, you can run ./gmail to check mail. Alternatively, you could also map the 'gmail' script to a hotkey."
+echo
+
+
+

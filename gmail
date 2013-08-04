@@ -1,0 +1,19 @@
+#!/bin/bash
+
+source $HOME/.gmailOSD/UserInfo
+
+DIR="$(pwd)"
+icon=$HOME/.gmailOSD/icon.ico
+
+notify-send -t 3000 --icon=$icon "Checking for new messages..."
+ 
+atomlines=`wget -T 3 -t 1 -q --secure-protocol=TLSv1 \
+ --no-check-certificate \
+ --user=$GMAIL --password=$PASSWORD \
+ https://mail.google.com/mail/feed/atom -O - \
+ | wc -l`
+ 
+
+[ $atomlines -gt "8" ] \
+ && notify-send -t 3000 --icon=$icon "You have new gmail." \
+ || notify-send -t 3000 --icon=$icon "No new gmail."

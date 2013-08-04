@@ -1,0 +1,15 @@
+1. Open Terminal
+
+2. cd to Gmail directory
+
+3. Run 'bash ./setup'
+
+4. Enter 'GMAIL' and 'PASSWORD' fields
+
+5. Ctrl+X
+
+6. Press 'y'
+
+7. Press Enter
+
+Extra - to check Gmail, run './gmail' from directory, or map command to a hotkey.
